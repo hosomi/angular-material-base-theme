@@ -27,7 +27,7 @@
         );
         @each $key, $val in $color-list {
           &[color="#{$key}"] {
-            @include _mat-toolbar-color($val);
+            // @include _mat-toolbar-color($val);
           }
         }
       }

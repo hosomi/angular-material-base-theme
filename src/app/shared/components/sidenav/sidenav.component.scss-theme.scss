@@ -21,7 +21,7 @@
 
     @each $key, $val in $color-list {
       &[color="#{$key}"] {
-        @include _mat-toolbar-color($val);
+        // @include _mat-toolbar-color($val);
         .mat-list-base {
           .mat-list-item {
             color: mat.get-color-from-palette($val, default-contrast);

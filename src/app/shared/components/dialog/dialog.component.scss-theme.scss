@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import "~@angular/material/theming";
 
 @mixin dialog-component-theme($config-or-theme) {
@@ -16,8 +17,8 @@
         margin-left: -24px;
         margin-right: -24px;
 
-        background-color: mat-color($background, app-bar);
-        color: mat-color($foreground, text);
+        background-color: mat.get-color-from-palette($background, app-bar);
+        color: mat.get-color-from-palette($foreground, text);
 
         $color-list: (
           "primary": $primary,

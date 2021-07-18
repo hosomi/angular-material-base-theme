@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import "~@angular/material/theming";
 
 @mixin sidenav-component-theme($config-or-theme) {
@@ -9,8 +10,8 @@
   $background: map-get($config, background);
 
   .mat-drawer {
-    background-color: mat-color($background, app-bar);
-    color: mat-color($foreground, text);
+    background-color: mat.get-color-from-palette($background, app-bar);
+    color: mat.get-color-from-palette($foreground, text);
 
     $color-list: (
       "primary": $primary,
@@ -23,7 +24,7 @@
         @include _mat-toolbar-color($val);
         .mat-list-base {
           .mat-list-item {
-            color: mat-color($val, default-contrast);
+            color: mat.get-color-from-palette($val, default-contrast);
           }
         }
       }
